@@ -11,7 +11,7 @@ const assertEqual = function(actual, expected) {
 const head = function(array) {
   const head = array[0];
   return head;
-}
+};
 
 // Test Cases
 assertEqual(head([5,6,7]), 5);
