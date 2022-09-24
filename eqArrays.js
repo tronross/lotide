@@ -19,7 +19,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
         equal = false;
       }
     }
-      return equal;
+    return equal;
   }
 };
 
