@@ -6,7 +6,9 @@ const flatten = function(array) {
   for (i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
       for (j = 0; j < array[i][j]; j++) {
+        console.log(j);
         flattenedArray.push(array[i][j]);
+        console.log("nested: ", array[i][j]);
       }
     } else {
       flattenedArray.push(array[i]);
@@ -15,8 +17,11 @@ const flatten = function(array) {
   return flattenedArray;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+// Test Conditions:
 
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+console.log(flatten(["banana", "canteloupe", "watermelon", ["apple", "strawberry", "peach"]]));
+console.log(flatten(["1", "2", "3", ["11", "12"]]));
 
 // A function to compare two arrays and assert if they are equal.
 const assertArraysEqual = function(arrayOne, arrayTwo) {
