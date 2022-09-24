@@ -1,9 +1,18 @@
 // A function which takes in arrays containing elements icluding nested arrays of elements, and returns a "flattened" version of the array.
 
 const flatten = function(array) {
+  let flattenedArray = [];
 
-  
-}
+  for (i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      for (j = 0; j < array[i][j]; j++) {
+        flattenedArray.push(array[i][j]);
+      }
+
+    }
+  }
+
+};
 
 
 
