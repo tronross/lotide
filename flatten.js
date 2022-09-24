@@ -8,7 +8,8 @@ const flatten = function(array) {
       for (j = 0; j < array[i][j]; j++) {
         flattenedArray.push(array[i][j]);
       }
-
+    } else {
+      flattenedArray.push(array[i]);
     }
   }
   return flattenedArray;
