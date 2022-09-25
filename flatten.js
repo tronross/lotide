@@ -6,10 +6,7 @@ const flatten = function(array) {
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
       for (let j = 0; j < array[i][j]; j++) {
-        //console.log(j);
         flattenedArray.push(array[i][j]);
-        //console.log("nested: ", array[i][j]);
-        console.log(array[i].length);
       }
     } else {
       flattenedArray.push(array[i]);
@@ -19,14 +16,19 @@ const flatten = function(array) {
 };
 
 // Test Conditions:
+console.log([1, 2, [3, 4], 5, [6]]);
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, [3, 4], 5, [6]]);
 
-//console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
-//console.log(flatten([ ["apple", "strawberry", "peach"]]));
-// console.log(flatten(["1", "2", "3", ["11", "12"]]));
-console.log(flatten(["yes", ["no"], "maybe"]));
+console.log(["1", "2", "3", ["11", "12"]]);
+console.log(flatten(["1", "2", "3", ["11", "12"]]));
+assertArraysEqual((flatten(["1", "2", "3", ["11", "12"]])), ["1", "2", "3", ["11", "12"]]);
+
+// TEST CASE TO BE REVIEWED WITH MENTOR: WILL NOT RECOGNIZE NESTED ARRAY WITH TEXT STRING
+//console.log(flatten(['yes', ['no'], 'maybe']));
 
 // A function to compare two arrays and assert if they are equal.
-const assertArraysEqual = function(arrayOne, arrayTwo) {
+function assertArraysEqual(arrayOne, arrayTwo) {
   let arraysEqual = true;
 
   if (arrayOne.length !== arrayTwo.length) {
@@ -44,7 +46,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   } else {
     console.log("🛑🛑🛑 Assertion Failed: The arrays are not equal.");
   }
-};
+}
 
 // A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
