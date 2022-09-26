@@ -26,7 +26,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 
 // middle:
 const middle = function(array) {
-  let middleArray = []
+  let middleArray = [];
   
   if (array.length <= 2) {
     return middleArray;
@@ -36,13 +36,22 @@ const middle = function(array) {
     return middleArray;
   } else if ((array.length % 2) === 0) {
     let midElelment = (array.length / 2);
+    middleArray.push(array[(midElelment - 1)]);
     middleArray.push(array[midElelment]);
-    middleArray.push(array[(midElelment + 1)]);
     return middleArray;
   }
 };
 
 
-  // Test Code:
-  console.log([1, 2], middle([1, 2]));
-  console.log([1, 2, 3, 4, 5], middle([1, 2, 3, 4, 5]));
+// Test Code:
+console.log([1, 2], middle([1, 2]));
+assertArraysEqual(middle([1, 2]), [1, 2]);
+
+console.log([1, 2, 3, 4, 5], middle([1, 2, 3, 4, 5]));
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5]);
+
+console.log([1, 2, 3, 4, 5, 77], middle([1, 2, 3, 4, 5, 77]));
+assertArraysEqual(middle([1, 2, 3, 4, 5, 77]), [1, 2, 3, 4, 5, 77]);
+
+console.log(["banana", "canteloupe", "watermelon"], middle(["banana", "canteloupe", "watermelon"]));
+assertArraysEqual(middle(["banana", "canteloupe", "watermelon"]), ["banana", "canteloupe", "watermelon"]);
