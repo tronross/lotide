@@ -30,7 +30,15 @@ const middle = function(array) {
   
   if (array.length <= 2) {
     return middleArray;
-  } else if {
-    
+  } else if ((array.length % 2) !== 0) {
+    let middleElement = (Math.ceil(array.length / 2));
+    middleArray.push(middleElement);
+    return middleArray;
   }
-}
+
+  }
+
+
+  // Test Code:
+  console.log([1, 2], middle([1, 2]));
+  console.log([1, 2, 3, 4, 5], middle([1, 2, 3, 4, 5]));
