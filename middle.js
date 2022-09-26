@@ -31,12 +31,16 @@ const middle = function(array) {
   if (array.length <= 2) {
     return middleArray;
   } else if ((array.length % 2) !== 0) {
-    let middleElement = (Math.ceil(array.length / 2));
-    middleArray.push(middleElement);
+    let midElement = (Math.floor(array.length / 2));
+    middleArray.push(array[midElement]);
+    return middleArray;
+  } else if ((array.length % 2) === 0) {
+    let midElelment = (array.length / 2);
+    middleArray.push(array[midElelment]);
+    middleArray.push(array[(midElelment + 1)]);
     return middleArray;
   }
-
-  }
+};
 
 
   // Test Code:
