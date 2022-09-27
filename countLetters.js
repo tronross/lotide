@@ -12,9 +12,11 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(sentence) {
 const lettersCount = {};
 
-for (letter of letters) {
-  
-}
+for (letter of sentence) {
+  if (lettersCount[letter]) {
+    
+  }
+  }
 };
 
 //Test Code:
