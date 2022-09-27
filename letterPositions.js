@@ -34,19 +34,19 @@ const letterPositions = function(sentence) {
 
   for (let i = 0; i < sentence.length; i ++) {
     let letter = sentence[i];
-    console.log(letter);
 
     if (letter !== " ") {
       if (results[letter]) {
       results[(letter)].push(i); 
-    } else {
-      results[sentence[i]] = [(i)];
-     
+      } else {
+        results[sentence[i]] = [(i)];
+      }
     }
-  }
-}
-console.log(results);
-  //return results;
-}
+  } 
+  return results;
+};
 
-letterPositions("lighthouse in the house");
+
+// Test code:
+console.log("lighthouse in the house");
+console.log(letterPositions("lighthouse in the house"));
