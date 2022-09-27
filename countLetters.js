@@ -13,10 +13,12 @@ const countLetters = function(sentence) {
 const lettersCount = {};
 
 for (letter of sentence) {
-  if (lettersCount[letter]) {
-    
+  //if (lettersCount[letter]) 
+  {
+ console.log(letter);
+  
   }
-  }
+}
 };
 
 //Test Code:
