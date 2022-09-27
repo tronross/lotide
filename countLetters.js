@@ -20,12 +20,17 @@ for (letter of sentence) {
     lettersCount[letter] = 1;
   }
   }
-  console.log(lettersCount);
+  return lettersCount;
 };
 
 //Test Code:
+console.log(countLetters("A cat is not a dog."));
+assertEqual((countLetters("A cat is not a dog.")), "A cat is not a dog.");
 
-countLetters("A lantern was burning close to the wall above.");
+console.log(countLetters("A lantern was burning close to the wall above."));
+assertEqual((countLetters("A lantern was burning close to the wall above.")), "A lantern was burning close to the wall above.");
 
-//console.log(letter);
+console.log(countLetters("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state"));
+assertEqual((countLetters("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state")), "Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state");
+
   
