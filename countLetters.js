@@ -15,6 +15,7 @@ const lettersCount = {};
 for (letter of sentence) {
   if (lettersCount[letter]) {
     lettersCount[letter] += 1;
+  } else if (letter === ' ') {
   } else {
     lettersCount[letter] = 1;
   }
