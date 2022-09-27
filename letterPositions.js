@@ -10,7 +10,6 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   }
 };
 
-
 // A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;
@@ -28,6 +27,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 
+// FUNCTION
 // letterPositions: Returns an object containing keys that correspond to the individual letters in the input (argument) and values that are arrays containing the indices of where in the string the letters appeared.
 
 const letterPositions = function(sentence) {
@@ -48,7 +48,7 @@ const letterPositions = function(sentence) {
 };
 
 
-// Test code:
+// TEST CODE:
 console.log("lighthouse in the house");
 console.log(letterPositions("lighthouse in the house"));
 assertArraysEqual(letterPositions("lighthouse in the house").g, [2]);
