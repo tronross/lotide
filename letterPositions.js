@@ -1,3 +1,4 @@
+// ASSERTION CODE
 // A function to compare two arrays and assert if they are equal.
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   const arraysEqual = eqArrays(arrayOne, arrayTwo);
