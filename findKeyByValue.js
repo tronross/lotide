@@ -13,9 +13,9 @@ const assertEqual = function(actual, expected) {
 const findKeyByValue = function(objToSearch, searchValue) {
   const matchKey = ""
 
-  for (const [key] in objToSearch)
-  console.log([key]);
-
+  for (const key in objToSearch) {
+  console.log(key);
+  }
   //return matchKey;
 }
 
