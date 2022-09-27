@@ -15,10 +15,10 @@ const countLetters = function(sentence) {
   for (const letter of sentence) {
     if (letter !== " ") {
       if (lettersCount[letter]) {
-      lettersCount[letter] += 1;
-    } else {
-      lettersCount[letter] = 1;
-    }
+        lettersCount[letter] += 1;
+      } else {
+        lettersCount[letter] = 1;
+      }
     }
   }
   return lettersCount;
