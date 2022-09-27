@@ -13,14 +13,18 @@ const countLetters = function(sentence) {
 const lettersCount = {};
 
 for (letter of sentence) {
-  //if (lettersCount[letter]) 
-  {
- console.log(letter);
-  
+  if (lettersCount[letter]) {
+    lettersCount[letter] += 1;
+  } else {
+    lettersCount[letter] = 1;
   }
-}
+  }
+  console.log(lettersCount);
 };
 
 //Test Code:
 
 countLetters("A lantern was burning close to the wall above.");
+
+//console.log(letter);
+  
