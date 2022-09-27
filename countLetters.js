@@ -25,13 +25,14 @@ const countLetters = function(sentence) {
 };
 
 //Test Code:
+console.log("A cat is not a dog.");
 console.log(countLetters("A cat is not a dog."));
 assertEqual((countLetters("A cat is not a dog.")), "A cat is not a dog.");
 
+console.log("A lantern was burning close to the wall above.");
 console.log(countLetters("A lantern was burning close to the wall above."));
 assertEqual((countLetters("A lantern was burning close to the wall above.")), "A lantern was burning close to the wall above.");
 
+console.log("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state");
 console.log(countLetters("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state"));
 assertEqual((countLetters("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state")), "Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state");
-
-  
