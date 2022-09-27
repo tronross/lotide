@@ -32,7 +32,16 @@ const eqArrays = function(arrayOne, arrayTwo) {
 const letterPositions = function(sentence) {
   const results = {};
 
+  for (let i = 0; i < sentence.length; i ++) {
+    if (letter !== " ") {
+      if (results[letter]) {
+      results[letter.push(i)]; 
+    } else {
+      results[letter = [i]];
+      console.log(results);
+    }
+  }
+}
 
-
-  return results;
+  //return results;
 }
