@@ -1,26 +1,22 @@
 // ASSERTION CODE:
-// A function to check if arrays are identical
-const eqArrays = function(arrayOne, arrayTwo) {
-  let equal = true;
-
-  if (arrayOne.length !== arrayTwo.length) {
-    equal = false;
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        equal = false;
-      }
-    }
-    return equal;
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
 
 //FUNCTION
 
-const findKeyByValue = function(searchValue, objToSearch) {
+const findKeyByValue = function(objToSearch, searchValue) {
+  const matchKey = ""
 
+  for (const [key] in objToSearch)
+  console.log([key]);
 
+  //return matchKey;
 }
 
 
