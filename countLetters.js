@@ -13,11 +13,12 @@ const countLetters = function(sentence) {
   const lettersCount = {};
 
   for (const letter of sentence) {
-    if (lettersCount[letter]) {
+    if (letter !== " ") {
+      if (lettersCount[letter]) {
       lettersCount[letter] += 1;
-    } else if (letter === ' ') {
     } else {
       lettersCount[letter] = 1;
+    }
     }
   }
   return lettersCount;
