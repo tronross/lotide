@@ -37,10 +37,10 @@ const letterPositions = function(sentence) {
     console.log(letter);
 
     if (letter !== " ") {
-      if (results[letter]) {
-      results["letter"] += (i); 
+      if (results[sentence[i]]) {
+      results[sentence[i]] += (i); 
     } else {
-      results["letter"] = [(i)];
+      results[sentence[i]] = [(i)];
       console.log(results);
     }
   }
