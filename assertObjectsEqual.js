@@ -1,5 +1,5 @@
 // ASSERTION HELPER CODE
-// eqArrays: A function to check if arrays are identical
+// eqArrays: A function to check if two arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;
 
@@ -15,7 +15,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return equal;
 };
 
-// eqObjects: Takes in two objects and returns true on a purrfekt match, and false on anything else.
+// eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else.
 const eqObjects = function(object1, object2) {
   let perfectMatch = true;
   const obj1Keys = (Object.keys(object1)).sort();
@@ -42,7 +42,7 @@ const eqObjects = function(object1, object2) {
 
 
 // FUNCTION
-// assertObjectsEqual: takes in two objects and console.logs an appropriate message to the console.
+// assertObjectsEqual: takes in two objects and console.logs an appropriate assertion message to the console.
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
