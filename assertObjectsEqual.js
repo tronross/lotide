@@ -46,8 +46,9 @@ const eqObjects = function(object1, object2) {
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
+  const perfectMatch = eqObjects(actual, expected);
 
-  if (actual === expected) {
+  if (perfectMatch === true) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
@@ -59,10 +60,19 @@ const assertObjectsEqual = function(actual, expected) {
 // Primitives:
 const ab = { a: "1", b: "2"};
 const ba = { b: "2", a: "1"};
-assertObjectsEqual(eqObjects(ab, ba), true); // => true
+assertObjectsEqual(ab, ba); // => Pass
 
 const abc = { a: "1", b: "2", c: "3"};
-assertObjectsEqual(eqObjects(ab, abc), false); // => false
+assertObjectsEqual(ab, abc); // => Fail
 
 const ad = { a: "1", d: "2"};
-assertObjectsEqual(eqObjects(ab, ad), false); // => false
+assertObjectsEqual(ab, ad); // => Fail
+
+
+// Arrays as Values:
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+assertObjectsEqual(cd, dc); // => Pass
+
+const cd2 = { c: "1", d: ["2", 3, 4] };
+assertObjectsEqual(cd, cd2); // => Fail
