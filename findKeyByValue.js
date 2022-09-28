@@ -14,7 +14,9 @@ const findKeyByValue = function(objToSearch, searchValue) {
   const matchKey = ""
 
   for (const key in objToSearch) {
-  console.log(key);
+    //const contender = objToSearch[(key)]
+   // if (searchValue === objToSearch[(key)]) {}
+    console.log(objToSearch[(key)]);
   }
   //return matchKey;
 }
