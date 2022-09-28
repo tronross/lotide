@@ -27,7 +27,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 
-// without: 
+// without: Takes a source array and an array of elements to remove, and returns a new array that contains the elements _not_ removed. The source array is unchanged.
 const without = function(source, itemsToRemove) {
   let editedArray = source;
 
@@ -40,9 +40,6 @@ const without = function(source, itemsToRemove) {
   }
   return editedArray;
 };
-
-
-
 
 
 // Test Cases:
