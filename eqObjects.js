@@ -30,7 +30,6 @@ const eqObjects = function(object1, object2) {
   let perfectMatch = true;
   const obj1Keys = (Object.keys(object1)).sort();
   const obj2Keys = (Object.keys(object2)).sort();
-  
  
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
     perfectMatch = false;
