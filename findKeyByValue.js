@@ -11,19 +11,18 @@ const assertEqual = function(actual, expected) {
 //FUNCTION
 
 const findKeyByValue = function(objToSearch, searchValue) {
-  let matchKey = ""
+  let matchKey = "";
 
   for (const key in objToSearch) {
-    //const contender = objToSearch[(key)]
     if (searchValue === objToSearch[(key)]) {
-    matchKey = key;
-  }
+      matchKey = key;
+    }
   }
   return matchKey;
-}
+};
 
 // TEST CODE:
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
