@@ -11,15 +11,15 @@ const assertEqual = function(actual, expected) {
 //FUNCTION
 
 const findKeyByValue = function(objToSearch, searchValue) {
-  const matchKey = ""
+  let matchKey = ""
 
   for (const key in objToSearch) {
     //const contender = objToSearch[(key)]
     if (searchValue === objToSearch[(key)]) {
-    console.log(objToSearch[(key)]);
+    matchKey = key;
   }
-  //return matchKey;
-}
+  }
+  return matchKey;
 }
 
 // TEST CODE:
