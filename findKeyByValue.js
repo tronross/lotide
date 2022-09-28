@@ -15,12 +15,12 @@ const findKeyByValue = function(objToSearch, searchValue) {
 
   for (const key in objToSearch) {
     //const contender = objToSearch[(key)]
-   // if (searchValue === objToSearch[(key)]) {}
+    if (searchValue === objToSearch[(key)]) {
     console.log(objToSearch[(key)]);
   }
   //return matchKey;
 }
-
+}
 
 // TEST CODE:
 const bestTVShowsByGenre = { 
