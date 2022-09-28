@@ -28,7 +28,10 @@ const eqArrays = function(arrayOne, arrayTwo) {
 // eqObjects: Takes in two objects and returns true on a purrfekt match, and false on anything else.
 const eqObjects = function(object1, object2) {
   let perfectMatch = true;
-
+  const obj1Keys = (Object.keys(object1)).sort();
+  const obj2Keys = (Object.keys(object2)).sort();
+  
+ 
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
     perfectMatch = false;
   } else {
@@ -36,11 +39,11 @@ const eqObjects = function(object1, object2) {
       for (const key2 in object2) {
         if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
           perfectMatch = eqArrays(object1[(key)], object2[(key)]);
-        } else {
-          if (key === key2) {
+        } else if (key === key2) {
             if (object1[(key)] !== object2[(key)])
               perfectMatch = false;
-          }
+        } else { 
+          perfectMatch = eqArrays((obj1Keys), (obj2Keys));
         }
       }
     }
@@ -58,6 +61,8 @@ assertEqual(eqObjects(ab, ba), true); // => true
 const abc = { a: "1", b: "2", c: "3"};
 assertEqual(eqObjects(ab, abc), false); // => false
 
+const ad = { a: "1", d: "2"}
+assertEqual(eqObjects(ab, ad), false); // => false
 
 // Arrays as Values:
 const cd = { c: "1", d: ["2", 3] };
