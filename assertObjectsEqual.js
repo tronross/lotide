@@ -1,5 +1,5 @@
 // ASSERTION HELPER CODE
-// eqArrays: A function to check if two arrays are identical
+// eqArrays: A function to check if two arrays are identical.
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;
 
