@@ -27,24 +27,25 @@ const eqArrays = function(arrayOne, arrayTwo) {
 // FUNCTION
 // eqObjects: Takes in two objects and returns true on a purrfekt match, and false on anything else.
 const eqObjects = function(object1, object2) {
+  let perfectMatch = true;
+
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
-    return false;
+    perfectMatch = false;
     } else {
       for (const key in object1) {
-      //console.log(key);
-      for (const key2 in object2) {
-        if (Array.isArray(object1[(key)])) {
-          console.log(object1[(key)])
-          //eqArrays(object1[(key)], object2[(key)]);
-        } else if (key === key2) {
-        //console.log(object1[(key)], object2[(key)]);
-        if (object1[(key)] !== object2[(key)])
-        return false;
+        for (const key2 in object2) {
+        if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
+          perfectMatch = eqArrays(object1[(key)], object2[(key)]);
+        } else {
+          if (key === key2) {
+            if (object1[(key)] !== object2[(key)])
+            perfectMatch = false;
+          }
+        }
       }
     }
   }
-}
-return true;
+return perfectMatch;
 };
 
 
@@ -52,12 +53,12 @@ return true;
 
 // TEST CODE:
 // Primitives:
-//const ab = { a: "1", b: "2"};
-//const ba = { b: "2", a: "1"};
-//assertEqual(eqObjects(ab, ba), true); // => true
+const ab = { a: "1", b: "2"};
+const ba = { b: "2", a: "1"};
+assertEqual(eqObjects(ab, ba), true); // => true
 
-//const abc = { a: "1", b: "2", c: "3"};
-//assertEqual(eqObjects(ab, abc), false); // => false
+const abc = { a: "1", b: "2", c: "3"};
+assertEqual(eqObjects(ab, abc), false); // => false
 
 
 // Arrays as Values:
