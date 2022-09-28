@@ -31,24 +31,22 @@ const eqObjects = function(object1, object2) {
 
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
     perfectMatch = false;
-    } else {
-      for (const key in object1) {
-        for (const key2 in object2) {
+  } else {
+    for (const key in object1) {
+      for (const key2 in object2) {
         if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
           perfectMatch = eqArrays(object1[(key)], object2[(key)]);
         } else {
           if (key === key2) {
             if (object1[(key)] !== object2[(key)])
-            perfectMatch = false;
+              perfectMatch = false;
           }
         }
       }
     }
   }
-return perfectMatch;
+  return perfectMatch;
 };
-
-
 
 
 // TEST CODE:
@@ -66,5 +64,5 @@ const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), true); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] }; 
+const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
