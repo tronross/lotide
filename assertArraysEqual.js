@@ -10,7 +10,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 };
 
 
-// A function to check if arrays are identical
+// eqArrays: A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;
 
@@ -22,8 +22,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
         equal = false;
       }
     }
-    return equal;
   }
+  return equal;
 };
 
 

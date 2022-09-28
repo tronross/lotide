@@ -9,6 +9,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   }
 };
 
+// eqArrays: A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;
 
@@ -20,8 +21,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
         equal = false;
       }
     }
-    return equal;
   }
+  return equal;
 };
 
 // FLATTEN: A function which takes in arrays containing elements including nested arrays of elements, and returns a "flattened" version of the array.
@@ -43,13 +44,13 @@ const flatten = function(array) {
 // Test Code:
 console.log([1, 2, [3, 4], 5, [6]]);
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, [3, 4], 5, [6]]);
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 
 console.log(["1", "2", "3", ["11", "12"]]);
 console.log(flatten(["1", "2", "3", ["11", "12"]]));
-assertArraysEqual((flatten(["1", "2", "3", ["11", "12"]])), ["1", "2", "3", ["11", "12"]]);
+assertArraysEqual((flatten(["1", "2", "3", ["11", "12"]])), ["1", "2", "3", "11", "12"]);
 
 // TEST CASE TO BE REVIEWED WITH MENTOR: WILL NOT RECOGNIZE NESTED ARRAY WITH TEXT STRING
 console.log(['yes', ['no'], 'maybe']);
 console.log(flatten(['yes', ['no'], 'maybe']));
-assertArraysEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', ['no'], 'maybe']);
+assertArraysEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
