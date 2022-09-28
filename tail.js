@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Return a shallow copy of the tail of the array.
+// tail: Return a shallow copy of the tail of the array.
 const tail = function(array) {
   return array.slice(1);
 };
