@@ -1,3 +1,33 @@
+// ASSERTION CODE:
+// A function to compare two arrays and assert if they are equal.
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  const arraysEqual = eqArrays(arrayOne, arrayTwo);
+ 
+  if (arraysEqual) {
+    console.log("✅✅✅ Assertion Passed: The arrays are equal.");
+  } else {
+    console.log("🛑🛑🛑 Assertion Failed: The arrays are not equal.");
+  }
+};
+
+// eqArrays: A function to check if arrays are identical
+const eqArrays = function(arrayOne, arrayTwo) {
+  let equal = true;
+
+  if (arrayOne.length !== arrayTwo.length) {
+    equal = false;
+  } else {
+    for (let i = 0; i < arrayOne.length; i++) {
+      if (arrayOne[i] !== arrayTwo[i]) {
+        equal = false;
+      }
+    }
+  }
+  return equal;
+};
+
+
+// without: 
 const without = function(source, itemsToRemove) {
   let editedArray = source;
 
@@ -12,47 +42,24 @@ const without = function(source, itemsToRemove) {
 };
 
 
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  let arraysEqual = true;
 
-  if (arrayOne.length !== arrayTwo.length) {
-    arraysEqual = false;
-  } else {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        arraysEqual = false;
-      }
-    }
-  }
-
-  if (arraysEqual) {
-    console.log("✅✅✅ Assertion Passed: The arrays are equal.");
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed: The arrays are not equal.");
-  }
-};
 
 
 // Test Cases:
 
-console.log(without(["banana", "canteloupe", "watermelon"], ["banana", "antelope", "watermelon"]));
-assertArraysEqual(without(["banana", "canteloupe", "watermelon"], ["banana", "antelope", "watermelon"]), ["banana", "canteloupe", "watermelon"]);
+console.log(without(["banana", "canteloupe", "watermelon"], ["banana"]));
+assertArraysEqual(without(["banana", "canteloupe", "watermelon"], ["banana"]), ["canteloupe", "watermelon"]); // => Pass
 
-console.log(without(["1", "2", "3"], ["1", "2", 3]));
-assertArraysEqual(without(["1", "2", "3"], ["1", "2", 3]), ["1", "2", "3"]);
+console.log(without(["1", "2", "3"], ["1", "2"]));
+assertArraysEqual(without(["1", "2", "3"], ["1", "2"]), ["3"]); // => Pass
 
-console.log(without([true, true], [true, false]));
-assertArraysEqual(without([true, true], [true, false]), [true, true]);
-
-console.log(without([true, true], [true, true]));
-assertArraysEqual(without([true, true], [true, true]), [true, true]);
+console.log(without([17, 99, 104, 155], [99]));
+assertArraysEqual(without([17, 99, 104, 155], [99]), [17, 104, 155]); // => Pass
 
 
-// Test Cases: Original array is not changed
-
-assertArraysEqual((without([1, 2, 3], [1])), [1, 2, 3]);
+// Test Case (b): Original array is not changed
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(words, ["hello", "world", "lighthouse"]); // => Fail
