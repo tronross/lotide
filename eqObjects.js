@@ -1,9 +1,26 @@
 // ASSERTION HELPER CODE
+// Assert Equal testing code
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+// eqArrays: A function to check if arrays are identical
+const eqArrays = function(arrayOne, arrayTwo) {
+  let equal = true;
+
+  if (arrayOne.length !== arrayTwo.length) {
+    equal = false;
+  } else {
+    for (let i = 0; i < arrayOne.length; i++) {
+      if (arrayOne[i] !== arrayTwo[i]) {
+        equal = false;
+      }
+    }
+    return equal;
   }
 };
 
@@ -38,6 +55,7 @@ assertEqual(eqObjects(ab, ba), true); // => true
 
 const abc = { a: "1", b: "2", c: "3"};
 assertEqual(eqObjects(ab, abc), false); // => false
+
 
 // Arrays as Values:
 const cd = { c: "1", d: ["2", 3] };
