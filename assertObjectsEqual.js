@@ -26,10 +26,10 @@ const eqObjects = function(object1, object2) {
   } else {
     for (const key in object1) {
       for (const key2 in object2) {
-        if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
-          perfectMatch = eqArrays(object1[(key)], object2[(key)]);
+        if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+          perfectMatch = eqArrays(object1[key], object2[key]);
         } else if (key === key2) {
-          if (object1[(key)] !== object2[(key)])
+          if (object1[key] !== object2[key])
             perfectMatch = false;
         } else {
           perfectMatch = eqArrays((obj1Keys), (obj2Keys));
