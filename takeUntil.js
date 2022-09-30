@@ -32,13 +32,15 @@ const eqArrays = function(arrayOne, arrayTwo) {
 const takeUntil = function(array, callback) {
   const arraySlice = [];
   
-  for (let element of array) {
-    if (element) {
-      return arraySlice;
-    } else {
-      arraySlice.push(callback(x));
-    }
-  }
+   for (let element of array) {
+    console.log(element);
+  //   // console.log(callback());
+  //   if (element) {
+  //     return arraySlice;
+  //   } else {
+      arraySlice.push(callback());
+  //  }
+   }
   return arraySlice;
 };
 
