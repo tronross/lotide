@@ -31,10 +31,17 @@ const eqArrays = function(arrayOne, arrayTwo) {
 // takeUntil:
 const takeUntil = function(array, callback) {
   const arraySlice = [];
-  let
+  
   for (let element of array) {
-    if (x = false) {
-      
+    if (element) {
+      return arraySlice;
+    } else {
+      arraySlice.push(callback(x));
     }
   }
-}
+  return arraySlice;
+};
+
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil(data1, x => x < 0);
+console.log(results1);
