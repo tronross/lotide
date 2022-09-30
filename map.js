@@ -47,3 +47,7 @@ console.log(results1);
 // Case b:
 const results2 = map(words, word => word.toUpperCase());
 console.log(results2);
+
+// Case c:
+const results3 = map(words, word => word.length);
+console.log(results3);
