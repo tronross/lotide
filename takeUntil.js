@@ -34,8 +34,6 @@ const takeUntil = function(array, callback) {
   let trip = false;
 
   for (let element of array) {
-    console.log(callback(element));
-    console.log(element);
     if (callback(element)) {
       return arraySlice;
     } else {
@@ -45,6 +43,7 @@ const takeUntil = function(array, callback) {
   return arraySlice;
 };
 
+// TEST CODE:
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);
 console.log(results1);
