@@ -37,8 +37,8 @@ const takeUntil = function(array, callback) {
       return arraySlice;
     } else {
       arraySlice.push(element);
-   }
- }
+    }
+  }
   return arraySlice;
 };
 
