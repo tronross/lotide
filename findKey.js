@@ -21,3 +21,13 @@ const findKey = function(object, callback) {
 
 
 
+const findKeyByValue = function(objToSearch, searchValue) {
+  let matchKey = "";
+
+  for (const key in objToSearch) {
+    if (searchValue === objToSearch[(key)]) {
+      matchKey = key;
+    }
+  }
+  return matchKey;
+};
