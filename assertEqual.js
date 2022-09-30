@@ -1,4 +1,5 @@
-// FUNCTION IMPLEMENTATION
+// FUNCTION
+// assertEqual: compare two values and print out a message asserting whether they match or not.
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
