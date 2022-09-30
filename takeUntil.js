@@ -31,14 +31,15 @@ const eqArrays = function(arrayOne, arrayTwo) {
 // takeUntil:
 const takeUntil = function(array, callback) {
   const arraySlice = [];
-  
+  let trip = false;
+
    for (let element of array) {
+    console.log(callback(element));
     console.log(element);
-  //   // console.log(callback());
-  //   if (element) {
+  //   if (trip) {
   //     return arraySlice;
-  //   } else {
-      arraySlice.push(callback());
+  //  } else {
+  //     arraySlice.push(element);
   //  }
    }
   return arraySlice;
