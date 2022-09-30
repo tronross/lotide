@@ -30,5 +30,11 @@ const eqArrays = function(arrayOne, arrayTwo) {
 // FUNCTION
 // takeUntil:
 const takeUntil = function(array, callback) {
-
+  const arraySlice = [];
+  let
+  for (let element of array) {
+    if (x = false) {
+      
+    }
+  }
 }
