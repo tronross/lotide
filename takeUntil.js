@@ -31,7 +31,6 @@ const eqArrays = function(arrayOne, arrayTwo) {
 // takeUntil:
 const takeUntil = function(array, callback) {
   const arraySlice = [];
-  let trip = false;
 
   for (let element of array) {
     if (callback(element)) {
