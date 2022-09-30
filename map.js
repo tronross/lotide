@@ -40,6 +40,10 @@ const map = function(array, callback) {
 //TEST CODE:
 const words = ["a", "screaming", "comes", "across", "the", "sky"];
 
+// Case a:
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
+// Case b:
+const results2 = map(words, word => word.toUpperCase());
+console.log(results2);
