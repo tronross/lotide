@@ -33,8 +33,16 @@ const cats = {
   Cat4: "Boobooboo",
   Cat5: "Huxley"
 };
-console.log(findKey(cats, x => x === "Peach"));
+assertEqual(findKey(cats, x => x === "Peach"), "Cat2");
 
+const lunch = {
+  "Burger":   10,
+  "Pizza":    12,
+  "Falafel":  7,
+  "Sushi":    12,
+  "Steak":    25
+}
+assertEqual(findKey(lunch, x => x < 10), "Falafel");
 
 
 
