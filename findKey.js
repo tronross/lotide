@@ -12,20 +12,16 @@ const assertEqual = function(actual, expected) {
 // FUNCTION
 // findKey: Takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. (If no key is found, it returns undefined.)
 const findKey = function(object, callback) {
-
   for (const item in object) {
-    // console.log(item);
-    // console.log(object);
-    // console.log(callback(object[item]));
-    // console.log(object[item]);
     if (callback(object[item])) {
       return item;
     }
   }
-}
+};
 
-//TEST CODE
 
+// TEST CODE
+// Case a:
 const cats = { 
   Cat1: "Barlo",
   Cat2: "Peach",
@@ -33,37 +29,25 @@ const cats = {
   Cat4: "Boobooboo",
   Cat5: "Huxley"
 };
+
 assertEqual(findKey(cats, x => x === "Peach"), "Cat2");
 
+//Case b:
 const lunch = {
   "Burger":   10,
   "Pizza":    12,
   "Falafel":  7,
   "Sushi":    12,
   "Steak":    25
-}
+};
+
 assertEqual(findKey(lunch, x => x < 10), "Falafel");
 
+//Case c:
+const songs = {
+  "The Botttom Line":                 { artist: "O.V. Wright", length: 313 },
+  "I Don't Do Windows":               { artist: "O.V. Wright", length: 224 },
+  "That's the Way I Feel About 'Cha": { artist: "O.V. Wright", length: 515 } 
+};
 
-
-
-
-console.log(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2));// => "noma")
-
-// const findKeyByValue = function(objToSearch, searchValue) {
-//   let matchKey = "";
-
-//   for (const key in objToSearch) {
-//     if (searchValue === objToSearch[(key)]) {
-//       matchKey = key;
-//     }
-//   }
-//   return matchKey;
-// }
+assertEqual(findKey(songs, x => x.length < 300), "I Don't Do Windows");
