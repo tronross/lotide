@@ -14,15 +14,27 @@ const assertEqual = function(actual, expected) {
 const findKey = function(object, callback) {
 
   for (const item in object) {
-    console.log(item);
-    console.log(object);
-    console.log(callback(object[item]));
-    console.log(object[item]);
+    // console.log(item);
+    // console.log(object);
+    // console.log(callback(object[item]));
+    // console.log(object[item]);
     if (callback(object[item])) {
       return item;
     }
   }
 }
+
+//TEST CODE
+
+const cats = { 
+  Cat1: "Barlo",
+  Cat2: "Peach",
+  Cat3: "Aktar",
+  Cat4: "Boobooboo",
+  Cat5: "Huxley"
+};
+console.log(findKey(cats, x => x === "Peach"));
+
 
 
 
