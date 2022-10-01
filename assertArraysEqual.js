@@ -34,7 +34,6 @@ assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // Fail
 assertArraysEqual([1, 2, 3], [1, 2, 3]); // Pass
 assertArraysEqual(["banana", "canteloupe", "watermelon"], ["banana", "canteloupe", "watermelon"]); // Pass
 assertArraysEqual(["banana", "canteloupe", "watermelon"], ["banana", "antelope", "watermelon"]); // Fail
-
 assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // Fail
 assertArraysEqual([true, true],[true, false]); // Fail
 assertArraysEqual([true, true],[true, true]); // Pass
