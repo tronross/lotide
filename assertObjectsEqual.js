@@ -15,6 +15,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return equal;
 };
 
+
 // eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else.
 const eqObjects = function(object1, object2) {
   let perfectMatch = true;
@@ -43,7 +44,6 @@ const eqObjects = function(object1, object2) {
 
 // FUNCTION
 // assertObjectsEqual: takes in two objects and console.logs an appropriate assertion message to the console.
-
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   const perfectMatch = eqObjects(actual, expected);
