@@ -32,7 +32,7 @@ const cats = {
 
 assertEqual(findKey(cats, x => x === "Peach"), "Cat2");
 
-//Case b:
+// Case b:
 const lunch = {
   "Burger":   10,
   "Pizza":    12,
@@ -43,7 +43,11 @@ const lunch = {
 
 assertEqual(findKey(lunch, x => x < 10), "Falafel");
 
-//Case c:
+// Case c:
+assertEqual(findKey(lunch, x => x < 5), undefined);
+
+
+// Case d:
 const songs = {
   "The Botttom Line":                 { artist: "O.V. Wright", length: 313 },
   "I Don't Do Windows":               { artist: "O.V. Wright", length: 224 },
