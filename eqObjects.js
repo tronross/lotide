@@ -25,7 +25,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 // FUNCTION
-// eqObjects: Takes in two objects and returns true on a purrfekt match, and false on anything else.
+// eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else.
 const eqObjects = function(object1, object2) {
   let perfectMatch = true;
   const obj1Keys = (Object.keys(object1)).sort();
