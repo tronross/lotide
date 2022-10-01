@@ -31,7 +31,7 @@ const flatten = function(array) {
 
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
-      for (let j = 0; j < array[i][j]; j++) {
+      for (let j = 0; j < array[i].length; j++) {
         flattenedArray.push(array[i][j]);
       }
     } else {
@@ -41,16 +41,18 @@ const flatten = function(array) {
   return flattenedArray;
 };
 
-// Test Code:
+// TEST CODE
+// Test case (a):
 console.log([1, 2, [3, 4], 5, [6]]);
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 
+// Test case (b):
 console.log(["1", "2", "3", ["11", "12"]]);
 console.log(flatten(["1", "2", "3", ["11", "12"]]));
 assertArraysEqual((flatten(["1", "2", "3", ["11", "12"]])), ["1", "2", "3", "11", "12"]);
 
-// TEST CASE TO BE REVIEWED WITH MENTOR: WILL NOT RECOGNIZE NESTED ARRAY WITH TEXT STRING
+// Test case (c):
 console.log(['yes', ['no'], 'maybe']);
 console.log(flatten(['yes', ['no'], 'maybe']));
 assertArraysEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
