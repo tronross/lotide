@@ -21,16 +21,16 @@ const eqObjects = function(object1, object2) {
   let perfectMatch = true;
   const obj1Keys = (Object.keys(object1)).sort();
   const obj2Keys = (Object.keys(object2)).sort();
-  
+ 
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
     perfectMatch = false;
   } else {
     for (const key in object1) {
       for (const key2 in object2) {
-        if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-          perfectMatch = eqArrays(object1[key], object2[key]);
+        if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
+          perfectMatch = eqArrays(object1[(key)].sort(), object2[(key)].sort());
         } else if (key === key2) {
-          if (object1[key] !== object2[key])
+          if (object1[(key)] !== object2[(key)])
             perfectMatch = false;
         } else {
           perfectMatch = eqArrays((obj1Keys), (obj2Keys));
@@ -44,6 +44,7 @@ const eqObjects = function(object1, object2) {
 
 // FUNCTION
 // assertObjectsEqual: takes in two objects and console.logs an appropriate assertion message to the console.
+
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   const perfectMatch = eqObjects(actual, expected);

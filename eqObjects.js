@@ -37,7 +37,7 @@ const eqObjects = function(object1, object2) {
     for (const key in object1) {
       for (const key2 in object2) {
         if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
-          perfectMatch = eqArrays(object1[(key)], object2[(key)]);
+          perfectMatch = eqArrays(object1[(key)].sort(), object2[(key)].sort());
         } else if (key === key2) {
           if (object1[(key)] !== object2[(key)])
             perfectMatch = false;
@@ -64,7 +64,7 @@ const ad = { a: "1", d: "2"};
 assertEqual(eqObjects(ab, ad), false); // => false
 
 // Arrays as Values:
-const cd = { c: "1", d: ["2", 3] };
+const cd = { c: "1", d: [3, "2"] };
 const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), true); // => true
 
