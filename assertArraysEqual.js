@@ -1,15 +1,4 @@
-// A function to compare two arrays and assert if they are equal.
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  const arraysEqual = eqArrays(arrayOne, arrayTwo);
- 
-  if (arraysEqual) {
-    console.log("✅✅✅ Assertion Passed: The arrays are equal.");
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed: The arrays are not equal.");
-  }
-};
-
-
+// ASSERTION HELPER CODE
 // eqArrays: A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;
@@ -26,7 +15,20 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return equal;
 };
 
+// FUNCTION
+// assert ArraysEqual: A function to compare two arrays and assert if they are equal.
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  const arraysEqual = eqArrays(arrayOne, arrayTwo);
+ 
+  if (arraysEqual) {
+    console.log("✅✅✅ Assertion Passed: The arrays are equal.");
+  } else {
+    console.log("🛑🛑🛑 Assertion Failed: The arrays are not equal.");
+  }
+};
 
+
+// TEST CODE
 // Test Cases for visual check (verification that results are accurate):
 assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // Fail
 assertArraysEqual([1, 2, 3], [1, 2, 3]); // Pass
