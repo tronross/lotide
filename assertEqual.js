@@ -15,5 +15,6 @@ assertEqual(1, 1); // Passes
 assertEqual(75, 956); // Fails
 assertEqual("Barlo is sooo hungry", "Barlo is sooo hungry"); // Passes
 assertEqual(99, "Ice Cream"); // Fails
+assertEqual('55', 55); // Fails
 
 module.exports = assertEqual;
