@@ -1,5 +1,5 @@
-const head = require('../head.js');
-const assertEqual = require('../assertEqual.js');
+const head = require('../head');
+const assertEqual = require('../assertEqual');
 
 // TEST CODE
 // Asserts returning the head of several arrays, and returning undefined for an empty array.
