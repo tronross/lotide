@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 // FUNCTION
 // Returns the head of an array.
 const head = function(array) {
