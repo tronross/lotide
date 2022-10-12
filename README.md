@@ -1,3 +1,7 @@
+# Lotide
+## Library
+
+
 ### assertEqual
 asertEqual compares two values and prints a message to the console asserting whether they match or not.
 
