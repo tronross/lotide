@@ -1,5 +1,5 @@
 // FUNCTION
-// assertEqual: compare two values and print out a message asserting whether they match or not.
+// assertEqual: compares two values and prints out a message asserting whether they match or not.
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -10,8 +10,10 @@ const assertEqual = function(actual, expected) {
 
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(75, 956);
-assertEqual("Barlo is sooo hungry", "Barlo is sooo hungry");
-assertEqual(99, "Ice Cream");
+assertEqual("Lighthouse Labs", "Bootcamp"); // Fails
+assertEqual(1, 1); // Passes
+assertEqual(75, 956); // Fails
+assertEqual("Barlo is sooo hungry", "Barlo is sooo hungry"); // Passes
+assertEqual(99, "Ice Cream"); // Fails
+
+module.exports = assertEqual;
