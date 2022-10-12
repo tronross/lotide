@@ -11,7 +11,7 @@ console.log("[1, 2, 3], [1, 2, 3, 4] => Fail, different .length\n");
 assertEqual(eqArrays([1, 2, 3], [1, '2', 3]), true); // fail
 console.log("[1, 2, 3], [1, '2', 3] => Fail, test for type coercion\n");
 
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => fail
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // fail
 console.log("[1, 2, 3], [3, 2, 1] => Fail, different element order\n");
 
 assertEqual(eqArrays(['banana', 'canteloupe', 'watermelon'], ['banana', 'canteloupe', 'watermelon']), true); // pass
