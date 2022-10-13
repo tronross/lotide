@@ -1,16 +1,21 @@
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 const middle = require('../middle');
 
-// TEST CODE
-// All assertions fail because assertArraysEqual is testing the input array against the extracted middle element(s).
-console.log("Source:", [1, 2], "Middle: ", middle([1, 2]));
-assertArraysEqual(middle([1, 2]), [1, 2]);
+describe("#middle", () => {
+  it("returns an empty array when fed an array containing a single element", () => {
+    assert.deepEqual(middle(['5']), []);
+  });
 
-console.log("Source:", [1, 2, 3, 4, 5], "Middle: ", middle([1, 2, 3, 4, 5]));
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5]);
+  it("returns an empty array when fed an array containing two elements", () => {
+    assert.deepEqual(middle(['5', 5]), []);
+  });
 
-console.log("Source:", [1, 2, 3, 4, 5, 77], "Middle: ", middle([1, 2, 3, 4, 5, 77]));
-assertArraysEqual(middle([1, 2, 3, 4, 5, 77]), [1, 2, 3, 4, 5, 77]);
+  it("returns an array containing a single element when fed an array containing an odd number of elements", () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
+  });
 
-console.log("Source:", ["banana", "canteloupe", "watermelon"], "Middle: ", middle(["banana", "canteloupe", "watermelon"]));
-assertArraysEqual(middle(["banana", "canteloupe", "watermelon"]), ["banana", "canteloupe", "watermelon"]);
+  it("returns an array containing two elements when fed an array containing an even number of elements", () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5, 77]), [3, 4]);
+  });
+
+});
