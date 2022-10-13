@@ -10,14 +10,14 @@ const assertEqual = function(actual, expected) {
 
 // eqArrays: A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
-  let equal = true;
+  let equal = true;  // set default condition as true
 
-  if (arrayOne.length !== arrayTwo.length) {
-    equal = false;
+  if (arrayOne.length !== arrayTwo.length) { 
+    equal = false; // false if the arrays are different lengths, but also important to ensure accuracy of the following for loop conditionals
   } else {
     for (let i = 0; i < arrayOne.length; i++) {
       if (arrayOne[i] !== arrayTwo[i]) {
-        equal = false;
+        equal = false; // false if any of the compared elements are not strictly equal
       }
     }
   }
@@ -25,24 +25,24 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 // FUNCTION
-// eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else.
+// eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else. Known bug: will fail with nested arrays.
 const eqObjects = function(object1, object2) {
-  let perfectMatch = true;
-  const obj1Keys = (Object.keys(object1)).sort();
+  let perfectMatch = true;  // set default condition as true
+  const obj1Keys = (Object.keys(object1)).sort(); // create sorted arrays of the input objects keys
   const obj2Keys = (Object.keys(object2)).sort();
- 
+
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
-    perfectMatch = false;
+    perfectMatch = false; // return false on differing number of keys 
   } else {
     for (const key in object1) {
       for (const key2 in object2) {
-        if (Array.isArray(object1[(key)]) && Array.isArray(object2[(key)])) {
-          perfectMatch = eqArrays(object1[(key)].sort(), object2[(key)].sort());
+        if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // if property is an array, call eqArray
+          perfectMatch = eqArrays(object1[key], object2[key]);
         } else if (key === key2) {
-          if (object1[(key)] !== object2[(key)])
+          if (object1[key] !== object2[key]) // return false on differing properties
             perfectMatch = false;
         } else {
-          perfectMatch = eqArrays((obj1Keys), (obj2Keys));
+          perfectMatch = eqArrays((obj1Keys), (obj2Keys)); // return false if any of the compared elements (keys) are not strictly equal
         }
       }
     }
@@ -66,7 +66,7 @@ assertEqual(eqObjects(ab, ad), false); // => false
 // Arrays as Values:
 const cd = { c: "1", d: [3, "2"] };
 const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+assertEqual(eqObjects(cd, dc), false); // => false
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
