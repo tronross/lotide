@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "Tight, lightweight JS utility library.",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tronross/lotide.git"
+  },
+  "author": "@tronross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tronross/lotide/issues"
+  },
+  "homepage": "https://github.com/tronross/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
+  }
+}
