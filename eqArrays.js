@@ -4,7 +4,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true; // Set default condition as true
 
   if (arrayOne.length !== arrayTwo.length) {
-    equal = false; // false if the arrays are different lengths, most important to ensure accuracy of the following for loop conditionals
+    equal = false; // false if the arrays are different lengths, but most important to ensure accuracy of the following for loop conditionals
   } else {
     for (let i = 0; i < arrayOne.length; i++) {
       if (arrayOne[i] !== arrayTwo[i]) {
