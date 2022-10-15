@@ -1,19 +1,13 @@
-// TEST/ASSERTION FUNCTION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
-
+// FUNCTION
 // countLetters: Take in a sentence (as a string) and return the count of each letter from that sentence.
 const countLetters = function(sentence) {
   const lettersCount = {};
+  const forCount = sentence.toLowerCase(); // convert to lower case (to avoid separate counts for upper and lower case)
 
-  for (const letter of sentence) {
-    if (letter !== " ") {
+  for (const letter of forCount) {
+    if (letter !== " ") { // do not count spaces
       if (lettersCount[letter]) {
         lettersCount[letter] += 1;
       } else {
@@ -24,15 +18,15 @@ const countLetters = function(sentence) {
   return lettersCount;
 };
 
-//Test Code:
-console.log("A cat is not a dog.");
-console.log(countLetters("A cat is not a dog."));
-assertEqual((countLetters("A cat is not a dog.")), "A cat is not a dog.");
+// TEST CODE
+const cat = "A cat is not a dog";
+console.log(cat);
+console.log(countLetters(cat));
+assertEqual(cat, "A cat is not a dog");
 
-console.log("A lantern was burning close to the wall above.");
-console.log(countLetters("A lantern was burning close to the wall above."));
-assertEqual((countLetters("A lantern was burning close to the wall above.")), "A lantern was burning close to the wall above.");
+const lantern = "A lantern was burning close to the wall above";
+console.log(lantern);
+console.log(countLetters(lantern));
+assertEqual(lantern, "A lantern was burning close to the wall above");
 
-console.log("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state");
-console.log(countLetters("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state"));
-assertEqual((countLetters("Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state")), "Heavy rain is falling across parts of Florida as Hurricane Ian advances on the state");
+module.exports = countLetters;
