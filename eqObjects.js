@@ -1,28 +1,5 @@
-// ASSERTION HELPER CODE
-// Assert Equal testing code
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-// eqArrays: A function to check if arrays are identical
-const eqArrays = function(arrayOne, arrayTwo) {
-  let equal = true;  // set default condition as true
-
-  if (arrayOne.length !== arrayTwo.length) { 
-    equal = false; // false if the arrays are different lengths, but also important to ensure accuracy of the following for loop conditionals
-  } else {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        equal = false; // false if any of the compared elements are not strictly equal
-      }
-    }
-  }
-  return equal;
-};
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
 
 // FUNCTION
 // eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else. Known bug: will fail with nested arrays.
@@ -32,7 +9,7 @@ const eqObjects = function(object1, object2) {
   const obj2Keys = (Object.keys(object2)).sort();
 
   if ((Object.keys(object1).length) !== (Object.keys(object2).length)) {
-    perfectMatch = false; // return false on differing number of keys 
+    perfectMatch = false; // return false on differing number of keys
   } else {
     for (const key in object1) {
       for (const key2 in object2) {
@@ -70,3 +47,5 @@ assertEqual(eqObjects(cd, dc), false); // => false
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
+
+module.exports = eqObjects;
