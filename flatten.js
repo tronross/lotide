@@ -1,4 +1,5 @@
-// TEST/ASSERTION FUNCTIONS
+// ASSERTION HELPER CODE
+// assertArraysEqual: A function to compare two arrays and assert if they are equal.
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   const arraysEqual = eqArrays(arrayOne, arrayTwo);
  
@@ -25,7 +26,9 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return equal;
 };
 
-// FLATTEN: A function which takes in arrays containing elements including nested arrays of elements, and returns a "flattened" version of the array.
+
+// FUNCTION
+// FLATTEN: A function which takes in arrays containing elements that include nested arrays, and returns a "flattened" version of the array.
 const flatten = function(array) {
   let flattenedArray = [];
 
@@ -43,16 +46,16 @@ const flatten = function(array) {
 
 // TEST CODE
 // Test case (a):
-console.log([1, 2, [3, 4], 5, [6]]);
-console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+console.log("Source array: ", [1, 2, [3, 4], 5, [6]]);
+console.log("Flattened array: ",flatten([1, 2, [3, 4], 5, [6]]));
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 
 // Test case (b):
-console.log(["1", "2", "3", ["11", "12"]]);
-console.log(flatten(["1", "2", "3", ["11", "12"]]));
+console.log("Source array: ", ["1", "2", "3", ["11", "12"]]);
+console.log("Flattened array: ", flatten(["1", "2", "3", ["11", "12"]]));
 assertArraysEqual((flatten(["1", "2", "3", ["11", "12"]])), ["1", "2", "3", "11", "12"]);
 
 // Test case (c):
-console.log(['yes', ['no'], 'maybe']);
-console.log(flatten(['yes', ['no'], 'maybe']));
+console.log("Source array: ", ['yes', ['no'], 'maybe']);
+console.log("Flattened array: ", flatten(['yes', ['no'], 'maybe']));
 assertArraysEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
