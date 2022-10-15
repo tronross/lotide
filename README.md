@@ -8,6 +8,9 @@ asertEqual compares two values and prints a message to the console asserting whe
 ### assertArraysEqual
 assertArraysEqual compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
 
+### assertObjectsEqual
+assertObjectsEqual compares two objects and asserts an appropriate message to the console.
+
 ### countLetters
 countLetters takes in a string and returns an object containing counts of each letter that appears in the string.
 
@@ -18,7 +21,7 @@ countOnly takes in an array of strings and an object specifying what strings to 
 eqArrays checks if two input arrays are identical, element by element.
 
 ### eqObjects
-eqObjects checks if two input objects are identical. 
+eqObjects checks if two input objects are identical, and returns true if they are.
 
 ### findKeyByValue
 findKeyByValue takes in an object and a value, scans the object and returns the first key which contains the given value.
