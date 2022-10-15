@@ -23,6 +23,9 @@ eqArrays checks if two input arrays are identical, element by element.
 ### eqObjects
 eqObjects checks if two input objects are identical, and returns true if they are.
 
+### findKey
+findKey takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. 
+
 ### findKeyByValue
 findKeyByValue takes in an object and a value, scans the object and returns the first key which contains the given value.
 
@@ -35,11 +38,17 @@ head returns the head of an array, and returns undefined in the event of an empt
 ### letterPositions
 letterPositions takes in a string and returns an object with properties (arrays) that correspond to the individual letters and their indices in the input string.
 
+### map
+map takes an array and a callback function as arguments, and returns a new array corresponding to the results of the callback function.
+
 ### middle
 middle returns an array containing the middle element(s) of an input array. If the input array contains two or fewer elements, middle returns an empty array.
 
 ### tail
 tail returns a shallow copy of the tail of the input array, leaving the input array unchanged.
+
+### takeUntil
+takeUntil takes in an array and a callback function and returns a slice of the array with elements taken from the beginning until the callback identifies the stopping point.
 
 ### without 
 without takes a source array and an array of elements to remove, and returns a shallow copy of the array with the elements removed.
