@@ -8,17 +8,26 @@ asertEqual compares two values and prints a message to the console asserting whe
 ### assertArraysEqual
 assertArraysEqual compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
 
+### countLetters
+countLetters takes in a string and returns an object containing counts of each letter that appears in the string.
+
 ### countOnly
 countOnly takes in an array of strings and an object specifying what strings to count, and returns an object containing those strings and their count. 
 
 ### eqArrays
 eqArrays checks if two input arrays are identical, element by element.
 
+### findKeyByValue
+findKeyByValue takes in an object and a value, scans the object and returns the first key which contains the given value.
+
 ### flatten
 flatten takes an array with other arrays inside (one level of arrays only), and flattens it into a single-level array.
 
 ### head
 head returns the head of an array, and returns undefined in the event of an empty array.
+
+### letterPositions
+letterPositions takes in a string and returns an object with properties (arrays) that correspond to the individual letters and their indices in the input string.
 
 ### middle
 middle returns an array containing the middle element(s) of an input array. If the input array contains two or fewer elements, middle returns an empty array.
