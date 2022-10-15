@@ -1,4 +1,9 @@
 # Lotide
+## Description
+
+A minimal clone of the [lodash](https://lodash.com/) JavaScript library, written in the early part of the [Lighthouse Labs](https://www.lighthouselabs.ca/) web development [flex](https://www.lighthouselabs.ca/en/web-development-flex-program) bootcamp. Utilized as a learning method, writing the code served as a means to gain a deeper understanding of various types of functions using JavaScript through Error Driven Development.
+
+
 ## Library
 
 
@@ -54,7 +59,7 @@ takeUntil takes in an array and a callback function and returns a slice of the a
 without takes a source array and an array of elements to remove, and returns a shallow copy of the array with the elements removed.
 
 ## Tests
-##### Tests implemented via mocha and chai. If a function is not referred to below, it is tested via assertion code from this lotide library implementation.
+##### Tests implemented via mocha and chai. If a function is not referred to below, it is tested via custom assertion code from within this lotide library implementation.
 
 ### assertEqualTest
 Test code to compare (identical and different) strings, numbers, and booleans; additional test for type coercion.
