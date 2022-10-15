@@ -1,18 +1,9 @@
-//ASSERTION HELPER CODE:
-// assertEqual: compare two values and print out a message asserting whether they match or not.
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
-
-//FUNCTION
-
+// FUNCTION
+// findKeyByValue: Takes in an object and a value, scans the object and returns the first key which contains the given value. If no key with that value is found, it returns undefined.
 const findKeyByValue = function(objToSearch, searchValue) {
-  let matchKey = "";
+  let matchKey;
 
   for (const key in objToSearch) {
     if (searchValue === objToSearch[(key)]) {
@@ -45,3 +36,5 @@ const petNames = {
 assertEqual(findKeyByValue(petNames, "Polar"), "dog");
 assertEqual(findKeyByValue(petNames, "Franz"), "chipmunk");
 assertEqual(findKeyByValue(petNames, "Stevie"), undefined);
+
+module.exports = findKeyByValue;
