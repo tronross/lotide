@@ -28,7 +28,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
 
 
 // FUNCTION
-// FLATTEN: A function which takes in arrays containing elements that include nested arrays, and returns a "flattened" version of the array.
+// FLATTEN: A function which takes in arrays containing elements that include one level of nested arrays, and returns a "flattened" version of the array.
 const flatten = function(array) {
   let flattenedArray = [];
 
