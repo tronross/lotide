@@ -25,66 +25,37 @@ This project was created and published by me as part of my learnings at Lighthou
 ## Documentation
 
 The following functions are currently implemented:
+- `assertArraysEqual(arrayOne, arrayTwo) `: compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
 
-- `assertEqual`: compares two values and prints a message to the console asserting whether they are strictly equal or not.
-
-- `assertArraysEqual`: compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
-
-- `assertObjectsEqual`: compares two objects and asserts an appropriate message to the console.
-
-- `countLetters`: takes in a string and returns an object containing counts of each letter that appears in the string.
-
-- `countOnly`: takes in an array of strings and an object specifying what strings to count, and returns an object containing those strings and their count. 
-
-- `eqArrays`: checks if two input arrays are identical, element by element.
-
-- `eqObjects`: checks if two input objects are identical, and returns true if they are.
-
-- `findKey`: takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. 
+- `assertEqual(actual, expected)` : compares two values and prints a message to the console asserting whether they are strictly equal or not.
 
 
-findKeyByValue takes in an object and a value, scans the object and returns the first key which contains the given value.
+- `assertObjectsEqual(actual, expected)` : compares two objects and asserts an appropriate message to the console.
 
-flatten takes an array with other arrays inside (one level of arrays only), and flattens it into a single-level array.
+- `countLetters(sentence)` : takes in a string and returns an object containing counts of each letter that appears in the string.
 
+- `countOnly(allItems, itemsToCount)` : takes in an array of strings and an object specifying what strings to count, and returns an object containing those strings and their count. 
 
-head returns the head of an array, and returns undefined in the event of an empty array.
+- `eqArrays(arrayOne, arrayTwo)` : checks if two input arrays are identical, element by element.
 
-### letterPositions
-letterPositions takes in a string and returns an object with properties (arrays) that correspond to the individual letters and their indices in the input string.
+- `eqObjects(object1, object2)` : checks if two input objects are identical, and returns true if they are.
 
-### map
-map takes an array and a callback function as arguments, and returns a new array corresponding to the results of the callback function.
+- `findKey(object, callback)` : takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. 
 
-### middle
-middle returns an array containing the middle element(s) of an input array. If the input array contains two or fewer elements, middle returns an empty array.
+- `findKeyByValue`: takes in an object and a value, scans the object and returns the first key which contains the given value.
 
-### tail
-tail returns a shallow copy of the tail of the input array, leaving the input array unchanged.
+- `flatten`: takes an array with other arrays inside (one level of arrays only), and flattens it into a single-level array.
 
-### takeUntil
-takeUntil takes in an array and a callback function and returns a slice of the array with elements taken from the beginning until the callback identifies the stopping point.
+- `head`: returns the head of an array, and returns undefined in the event of an empty array.
 
-### without 
-without takes a source array and an array of elements to remove, and returns a shallow copy of the array with the elements removed.
+- `letterPositions`: takes in a string and returns an object with properties (arrays) that correspond to the individual letters and their indices in the input string.
 
-## Tests
-##### Tests implemented via mocha and chai. If a function is not referred to below, it is tested via custom assertion code from within this lotide library implementation.
+- `map`: takes an array and a callback function as arguments, and returns a new array corresponding to the results of the callback function.
 
-### assertEqualTest
-Test code to compare (identical and different) strings, numbers, and booleans; additional test for type coercion.
+- `middle`: returns an array containing the middle element(s) of an input array. If the input array contains two or fewer elements, middle returns an empty array.
 
-### assertArraysEqualTest
-Test code to assert passes or fails, along with logging the input arrays and condition tested.
+- `tail`: returns a shallow copy of the tail of the input array, leaving the input array unchanged.
 
-### eqArraysTest
-Test code to assert passes or fails, along with logging the input arrays and condition tested.
+- `takeUntil`: takes in an array and a callback function and returns a slice of the array with elements taken from the beginning until the callback identifies the stopping point.
 
-### headTest
-Test code to assert successfully returning the heads of several arrays, and returning undefined for an empty array.
-
-### middleTest
-Test code asserts fails as a proxy for the return array being different from the input array, also logs the input array and the returned array.
-
-### tailTest
-Test code returning a shallow copy of the tail of the input array. It logs the input array, tail array, and asserts that the input array's length remains unchanged (as a proxy for the input array remaining unchanged).
+- `without`: takes a source array and an array of elements to remove, and returns a shallow copy of the array with the elements removed.
