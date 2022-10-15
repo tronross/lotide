@@ -1,31 +1,4 @@
-//ASSERTION HELPER CODE:
-// aasertArraysEqual: a function to compare two arrays and assert if they are equal.
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  const arraysEqual = eqArrays(arrayOne, arrayTwo);
- 
-  if (arraysEqual) {
-    console.log("✅✅✅ Assertion Passed: The arrays are equal.");
-  } else {
-    console.log("🛑🛑🛑 Assertion Failed: The arrays are not equal.");
-  }
-};
-
-// eqArrays: A function to check if arrays are identical.
-const eqArrays = function(arrayOne, arrayTwo) {
-  let equal = true;
-
-  if (arrayOne.length !== arrayTwo.length) {
-    equal = false;
-  } else {
-    for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        equal = false;
-      }
-    }
-  }
-  return equal;
-};
-
+const assertArraysEqual = require('./assertArraysEqual');
 
 // FUNCTION
 // takeUntil: Takes in an array and a callback function and returns a slice of the array with elements taken from the beginning until the callback returns a truthy value.
@@ -57,3 +30,5 @@ assertArraysEqual(results2, ['a', 'screaming', 'comes']);
 const data3 = [2.66, 5.5, 1.66, -56, 55.77, 112];
 const results3 = takeUntil(data3, x => Number.isInteger(x));
 assertArraysEqual(results3, [2.66, 5.5, 1.66]);
+
+module.exports = takeUntil;
