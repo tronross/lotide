@@ -1,5 +1,4 @@
 const eqArrays = require('./eqArrays');
-const assertEqual = require('./assertEqual');
 
 // FUNCTION
 // eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else. Known bug: will fail with nested arrays.
@@ -26,26 +25,5 @@ const eqObjects = function(object1, object2) {
   }
   return perfectMatch;
 };
-
-
-// TEST CODE:
-// Primitives:
-const ab = { a: "1", b: "2"};
-const ba = { b: "2", a: "1"};
-assertEqual(eqObjects(ab, ba), true); // => true
-
-const abc = { a: "1", b: "2", c: "3"};
-assertEqual(eqObjects(ab, abc), false); // => false
-
-const ad = { a: "1", d: "2"};
-assertEqual(eqObjects(ab, ad), false); // => false
-
-// Arrays as Values:
-const cd = { c: "1", d: [3, "2"] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), false); // => false
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
 
 module.exports = eqObjects;
