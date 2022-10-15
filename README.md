@@ -17,6 +17,9 @@ countOnly takes in an array of strings and an object specifying what strings to 
 ### eqArrays
 eqArrays checks if two input arrays are identical, element by element.
 
+### eqObjects
+eqObjects checks if two input objects are identical. 
+
 ### findKeyByValue
 findKeyByValue takes in an object and a value, scans the object and returns the first key which contains the given value.
 
