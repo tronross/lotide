@@ -8,8 +8,14 @@ asertEqual compares two values and prints a message to the console asserting whe
 ### assertArraysEqual
 assertArraysEqual compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
 
+### countOnly
+countOnly takes in an array of strings and an object specifying what strings to count, and returns an object containing those strings and their count. 
+
 ### eqArrays
 eqArrays checks if two input arrays are identical, element by element.
+
+### flatten
+flatten takes an array with other arrays inside (one level of arrays only), and flattens it into a single-level array.
 
 ### head
 head returns the head of an array, and returns undefined in the event of an empty array.
@@ -20,11 +26,12 @@ middle returns an array containing the middle element(s) of an input array. If t
 ### tail
 tail returns a shallow copy of the tail of the input array, leaving the input array unchanged.
 
-
-
-
+### without 
+without takes a source array and an array of elements to remove, and returns a shallow copy of the array with the elements removed.
 
 ## Tests
+##### Tests implemented via mocha and chai. If a function is not referred to below, it is tested via assertion code from this lotide library implementation.
+
 ### assertEqualTest
 Test code to compare (identical and different) strings, numbers, and booleans; additional test for type coercion.
 
