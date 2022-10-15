@@ -30,7 +30,7 @@ The following functions are currently implemented:
 - `assertEqual(actual, expected)` : compares two values and prints a message to the console asserting whether they are strictly equal or not.
 
 
-- `assertObjectsEqual(actual, expected)` : compares two objects and asserts an appropriate message to the console.
+- `assertObjectsEqual(actual, expected)` : compares two objects and prints a message to the console asserting whether they are strictly equal or not.
 
 - `countLetters(sentence)` : takes in a string and returns an object containing counts of each letter that appears in the string.
 
