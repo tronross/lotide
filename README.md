@@ -1,43 +1,53 @@
 # Lotide
-## Description
 
-A minimal clone of the [lodash](https://lodash.com/) JavaScript library, written in the early part of the [Lighthouse Labs](https://www.lighthouselabs.ca/) web development [flex](https://www.lighthouselabs.ca/en/web-development-flex-program) bootcamp. Utilized as a learning method, writing the code served as a means to gain a deeper understanding of various types of functions using JavaScript through Error Driven Development.
+A mini clone of the [Lodash](https://lodash.com) library.
+
+## Purpose
+
+**_BEWARE:_ This library was published for learning purposes. It is _not_ intended for use in production-grade software.**
+
+This project was created and published by me as part of my learnings at Lighthouse Labs. 
+
+## Usage
+
+**Install it:**
+
+`npm install @tronross/lotide`
+
+**Require it:**
+
+`const _ = require('@tronross/lotide');`
+
+**Call it:**
+
+`const results = _.tail([1, 2, 3]) // => [2, 3]`
+
+## Documentation
+
+The following functions are currently implemented:
+
+- `assertEqual`: compares two values and prints a message to the console asserting whether they are strictly equal or not.
+
+- `assertArraysEqual`: compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
+
+- `assertObjectsEqual`: compares two objects and asserts an appropriate message to the console.
+
+- `countLetters`: takes in a string and returns an object containing counts of each letter that appears in the string.
+
+- `countOnly`: takes in an array of strings and an object specifying what strings to count, and returns an object containing those strings and their count. 
+
+- `eqArrays`: checks if two input arrays are identical, element by element.
+
+- `eqObjects`: checks if two input objects are identical, and returns true if they are.
+
+- `findKey`: takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. 
 
 
-## Library
-
-
-### assertEqual
-asertEqual compares two values and prints a message to the console asserting whether they are strictly equal or not.
-
-### assertArraysEqual
-assertArraysEqual compares two arrays and prints a message to the console asserting whether they are strictly equal or not.
-
-### assertObjectsEqual
-assertObjectsEqual compares two objects and asserts an appropriate message to the console.
-
-### countLetters
-countLetters takes in a string and returns an object containing counts of each letter that appears in the string.
-
-### countOnly
-countOnly takes in an array of strings and an object specifying what strings to count, and returns an object containing those strings and their count. 
-
-### eqArrays
-eqArrays checks if two input arrays are identical, element by element.
-
-### eqObjects
-eqObjects checks if two input objects are identical, and returns true if they are.
-
-### findKey
-findKey takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. 
-
-### findKeyByValue
 findKeyByValue takes in an object and a value, scans the object and returns the first key which contains the given value.
 
-### flatten
 flatten takes an array with other arrays inside (one level of arrays only), and flattens it into a single-level array.
 
-### head
+
 head returns the head of an array, and returns undefined in the event of an empty array.
 
 ### letterPositions
