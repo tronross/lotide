@@ -1,13 +1,4 @@
-//ASSERTION HELPER CODE:
-// assertEqual: compare two values and print out a message asserting whether they match or not.
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+const assertEqual = require('./assertEqual');
 
 // FUNCTION
 // findKey: Takes in an object and a callback, scans the object and returns the first key for which the callback returns a truthy value. (If no key is found, it returns undefined.)
@@ -55,3 +46,5 @@ const songs = {
 };
 
 assertEqual(findKey(songs, x => x.length < 300), "I Don't Do Windows");
+
+module.exports = findKey;
