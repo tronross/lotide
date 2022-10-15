@@ -1,8 +1,8 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "Tight, lightweight JS utility library.",
-  "main": "assertArraysEqual.js",
+  "description": "Minimal, lightweight JS utility library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
