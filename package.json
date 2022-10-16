@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@tronross/lotide",
   "version": "1.0.0",
-  "description": "Minimal, lightweight JS utility library.",
+  "description": "Mini clone of the lodash library.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/tronross/lotide.git"
   },
-  "author": "@tronross",
+  "author": "John Ross",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tronross/lotide/issues"
