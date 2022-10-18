@@ -3,7 +3,7 @@
 const eqArrays = function(arrayOne, arrayTwo) {
   let equal = true;  // set default result as true, unless proven false
 
-  if (arrayOne.length !== arrayTwo.length) { 
+  if (arrayOne.length !== arrayTwo.length) {
     equal = false; // fail on arrays of different lengths (essential for comparing element by element)
   } else {
     for (let i = 0; i < arrayOne.length; i++) {
