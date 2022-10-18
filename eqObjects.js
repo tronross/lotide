@@ -1,7 +1,7 @@
 const eqArrays = require('./eqArrays');
 
 // FUNCTION
-// eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else. Known bug: will fail with nested arrays.
+// eqObjects: Takes in two objects and returns true on a perfect match, and false on anything else.
 const eqObjects = function(object1, object2) {
   let perfectMatch = true;  // set default condition as true
   const obj1Keys = (Object.keys(object1)).sort(); // create sorted arrays of the input objects keys
