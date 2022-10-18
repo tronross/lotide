@@ -1,14 +1,16 @@
 // FUNCTION
-// eqArrays: check if two input arrays are identical.
+// eqArrays: A function to check if arrays are identical
 const eqArrays = function(arrayOne, arrayTwo) {
-  let equal = true; // Set default condition as true
+  let equal = true;  // set default result as true, unless proven false
 
-  if (arrayOne.length !== arrayTwo.length) {
-    equal = false; // false if the arrays are different lengths, but also important to ensure accuracy of the following for loop conditionals
+  if (arrayOne.length !== arrayTwo.length) { 
+    equal = false; // fail on arrays of different lengths (essential for comparing element by element)
   } else {
     for (let i = 0; i < arrayOne.length; i++) {
-      if (arrayOne[i] !== arrayTwo[i]) {
-        equal = false; // false if any of the compared elements are not strictly equal
+      if (Array.isArray(arrayOne[i])) { // recursively call itself on nested arrays
+        eqArrays(arrayOne[i], arrayTwo[i]);
+      } else if (arrayOne[i] !== arrayTwo[i]) { // compare each element in the arrays
+        equal = false;
       }
     }
   }
