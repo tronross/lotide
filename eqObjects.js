@@ -14,14 +14,14 @@ const eqObjects = function(object1, object2) {
   const keysCheck = eqArrays((obj1Keys), (obj2Keys));
   if (keysCheck === false) {
     return eqObjs = false;
-  } 
+  }
 
   for (const key in object1) {
-        if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // if property is an array, call eqArray
-          eqObjs = eqArrays(object1[key], object2[key]);
-        } else if (object1[key] !== object2[key]) // return false on differing properties
-          return eqObjs = false;
-        }
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) { // if property is an array, call eqArray
+      eqObjs = eqArrays(object1[key], object2[key]);
+    } else if (object1[key] !== object2[key]) // return false on differing properties
+      return eqObjs = false;
+  }
   return eqObjs;
 };
 
