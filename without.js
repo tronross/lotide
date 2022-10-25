@@ -3,12 +3,12 @@ const assertArraysEqual = require('./assertArraysEqual');
 // FUNCTION
 // without: Takes a source array and an array of elements to remove, and returns a new array that contains the elements _not_ removed. The source array is unchanged.
 const without = function(source, itemsToRemove) {
-  const array = [...source];
+  const array = [...source]; // copy array (to prevent mutation of original array)
 
   for (let element of itemsToRemove) {
     for (let j = 0; j < array.length; j++) {
       if (element === array[j]) {
-        array.splice([j], 1);
+        array.splice([j], 1); // remove elements from array as required
       }
     }
   }
