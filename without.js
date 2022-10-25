@@ -3,21 +3,22 @@ const assertArraysEqual = require('./assertArraysEqual');
 // FUNCTION
 // without: Takes a source array and an array of elements to remove, and returns a new array that contains the elements _not_ removed. The source array is unchanged.
 const without = function(source, itemsToRemove) {
-  let array = source;
-  let editedArray = [];
+  const array = [...source];
 
   for (let element of itemsToRemove) {
-    for (let i = 0; i < array.length; i++) {
-      if (element !== array[i]) {
-        editedArray.push(array[i]);
+    for (let j = 0; j < array.length; j++) {
+      if (element === array[j]) {
+        array.splice([j], 1);
       }
     }
   }
-  return editedArray;
+  return array;
 };
 
 
 // TEST CODE
+
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
 
 assertArraysEqual(without(["banana", "canteloupe", "watermelon"], ["banana"]), ["canteloupe", "watermelon"]); // => Pass
 
@@ -26,7 +27,7 @@ assertArraysEqual(without([17, 99, 104, 155], [99]), [17, 104, 155]); // => Pass
 // Test Cases (b): Original array is not changed
 
 const words = ["hello", "world", "lighthouse"];
-const OrigWords = words;
+const OrigWords = ["hello", "world", "lighthouse"];
 
 without(words, ["lighthouse"]); // no need to capture return value for this test case
 
