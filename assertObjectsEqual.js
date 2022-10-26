@@ -35,4 +35,11 @@ assertObjectsEqual(cd, dc); // => Pass
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertObjectsEqual(cd, cd2); // => Fail
 
-module.exports = assertObjectsEqual;
+
+// Nested objects:
+assertObjectsEqual({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }); // => Pass
+assertObjectsEqual({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }); // => Fail
+assertObjectsEqual({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }); // => Fail
+
+assertObjectsEqual({ a: { y: 0, z: 1, x: { z: 1 } }, b: 2 }, { a: { z: 1 }, b: 2 }); // => Fail
+assertObjectsEqual({ a: { y: 0, z: 1, x: { z: 1, x: {xx: 77} } }, b: 2 }, { a: { y: 0, z: 1, x: { z: 1, x: {xx: 77} } }, b: 2 }); // => Pass
