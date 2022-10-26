@@ -8,6 +8,7 @@ const eqObjects = function(obj1, obj2) {
   const obj1Keys = (Object.keys(obj1)).sort();
   const obj2Keys = (Object.keys(obj2)).sort();
   const keysCheck = eqArrays((obj1Keys), (obj2Keys));
+  
   if (keysCheck === false) {
     return false;
   }
