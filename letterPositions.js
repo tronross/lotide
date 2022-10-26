@@ -1,7 +1,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
 // FUNCTION
-// letterPositions: Returns an object containing properties that correspond to the letters in the input and arrays containing the indices of where in the string the letters appeared.
+// letterPositions: Returns an object containing keys that correspond to the letters in the input string and arrays containing the indices of where in the string the letters appeared.
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -11,9 +11,9 @@ const letterPositions = function(sentence) {
 
     if (letter !== " ") {
       if (results[letter]) {
-        results[(letter)].push(i);
+        results[letter].push(i);
       } else {
-        results[sentence[i]] = [(i)];
+        results[letter] = [i];
       }
     }
   }
