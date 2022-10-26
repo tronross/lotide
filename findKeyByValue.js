@@ -2,15 +2,14 @@ const assertEqual = require('./assertEqual');
 
 // FUNCTION
 // findKeyByValue: Takes in an object and a value, scans the object and returns the first key which contains the given value. If no key with that value is found, it returns undefined.
-const findKeyByValue = function(objToSearch, searchValue) {
-  let matchKey; // declare default return condition as undefined
 
+const findKeyByValue = function(objToSearch, searchValue) {
   for (const key in objToSearch) {
     if (searchValue === objToSearch[key]) {
-      return matchKey = key; // return first matching key
+      return key; // return first matching key
     }
   }
-  return matchKey; // return undefined if no match
+  return undefined; // return undefined if no match
 };
 
 
