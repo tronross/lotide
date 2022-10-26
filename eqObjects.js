@@ -14,8 +14,14 @@ const eqObjects = function(obj1, obj2) {
   }
 
   for (const key in obj1) {
+    // if value is an object, recursively call eqObjects
+    if (typeof obj1[key] === 'object' && !Array.isArray(obj1[key])) {
+      const nestObjCheck = eqObjects(obj1[key], obj2[key]);
+      if (nestObjCheck === false) {
+        return false;
+      }
     // if value is an array, compare it with its corresponding array
-    if (Array.isArray(obj1[key])) {
+    } else if (Array.isArray(obj1[key])) {
       const arraysCheck = eqArrays(obj1[key], obj2[key]);
       if (arraysCheck === false) {
         return false;
