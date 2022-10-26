@@ -17,12 +17,12 @@ const takeUntil = function(array, callback) {
 
 // TEST CODE:
 // Case a:
-const data1 = ["onions", "tomatoes", "bread", "cheese", "leather", "felt"];
-const results1 = takeUntil(data1, x => x === "leather");
+const data1 = ['onions', 'tomatoes', 'bread', 'cheese', 'leather', 'felt'];
+const results1 = takeUntil(data1, x => x === 'leather');
 assertArraysEqual(results1, ['onions', 'tomatoes', 'bread', 'cheese']);
 
 // Case b:
-const data2 = ["a", "screaming", "comes", "across", "the", "sky"];
+const data2 = ['a', 'screaming', 'comes', 'across', 'the', 'sky'];
 const results2 = takeUntil(data2, x => x.length < 7 && x.length > 5);
 assertArraysEqual(results2, ['a', 'screaming', 'comes']);
 
