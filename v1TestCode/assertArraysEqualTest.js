@@ -1,8 +1,6 @@
 const assertArraysEqual = require('../assertArraysEqual');
 
 // TEST CODE, with logged input arrays and test condition for visual verification.
-assertArraysEqual([1, [2, 3]], [1, [2, 3]]); // Pass
-console.log("[1, [2, 3]], [1, [2, 3]] => Pass, identical arrays \n");
 
 assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // Fail
 console.log("[1, 2, 3], [1, 2, 3, 4] => Fail, different .length\n");
@@ -18,3 +16,13 @@ console.log("['banana', 'canteloupe', 'watermelon'], ['banana', 'canteloupe', 'w
 
 assertArraysEqual(['banana', 'canteloupe', 'watermelon'], ['banana', 'antelope', 'watermelon']); // Fail
 console.log("['banana', 'canteloupe', 'watermelon'], ['banana', 'antelope', 'watermelon'] => Fail, different single element\n");
+
+// Nested arrays (recursive test)
+assertArraysEqual([1, [2, 3]], [1, [2, 3]]); // Pass
+console.log("[1, [2, 3]], [1, [2, 3]] => Pass, identical arrays \n");
+
+assertArraysEqual([1, [2, 3, [1, 5]]], [1, [2, 3, [1, 5]]]); // Pass
+console.log("[1, [2, 3, [1, 5]]], [1, [2, 3, [1, 5]]] => Pass, identical arrays \n");
+
+assertArraysEqual([1, [2, 3, [1, 5]]], [1, [2, 3, [1, 7]]]); // Fail
+console.log("[1, [2, 3, [1, 5]]], [1, [2, 3, [1, 7]]] => Fail, different nested element \n");
