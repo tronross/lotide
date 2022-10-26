@@ -1,7 +1,7 @@
 const assertArraysEqual = require('./assertArraysEqual');
 
 // FUNCTION
-// flatten: A function which takes in arrays containing elements that include one level of nested arrays, and returns a "flattened" version of the array.
+// flatten: A function which takes in a two-dimensional array and returns a "flattened" version of the array.
 const flatten = function(array) {
   let flattenedArray = [];
 
