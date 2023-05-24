@@ -3,14 +3,14 @@ const assertObjectsEqual = require('../assertObjectsEqual');
 // TEST CODE:
 
 // Primitives:
-const ab = { a: "1", b: "2"};
-const ba = { b: "2", a: "1"};
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
 assertObjectsEqual(ab, ba); // => Pass
 
-const abc = { a: "1", b: "2", c: "3"};
+const abc = { a: "1", b: "2", c: "3" };
 assertObjectsEqual(ab, abc); // => Fail
 
-const ad = { a: "1", d: "2"};
+const ad = { a: "1", d: "2" };
 assertObjectsEqual(ab, ad); // => Fail
 
 
@@ -29,4 +29,4 @@ assertObjectsEqual({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }); // => Fa
 assertObjectsEqual({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }); // => Fail
 
 assertObjectsEqual({ a: { y: 0, z: 1, x: { z: 1 } }, b: 2 }, { a: { z: 1 }, b: 2 }); // => Fail
-assertObjectsEqual({ a: { y: 0, z: 1, x: { z: 1, x: {xx: 77} } }, b: 2 }, { a: { y: 0, z: 1, x: { z: 1, x: {xx: 77} } }, b: 2 }); // => Pass
+assertObjectsEqual({ a: { y: 0, z: 1, x: { z: 1, x: { xx: 77 } } }, b: 2 }, { a: { y: 0, z: 1, x: { z: 1, x: { xx: 77 } } }, b: 2 }); // => Pass
