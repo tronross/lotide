@@ -1,6 +1,7 @@
 // FUNCTION
 // countLetters: Take in a sentence (as a string) and return the count of each letter from that sentence.
-const countLetters = function(sentence) {
+
+const countLetters = function (sentence) {
   const lettersCount = {};
   const forCount = sentence.toLowerCase(); // convert to lower case (to avoid separate counts for upper and lower case)
 
