@@ -1,7 +1,7 @@
 // FUNCTION
 // eqArrays: A function to check if arrays are identical
 
-const eqArrays = function(arrayOne, arrayTwo) {
+const eqArrays = function (arrayOne, arrayTwo) {
   if (arrayOne.length !== arrayTwo.length) {
     return false; // immediately return false on arrays of different lengths (essential for comparing element by element)
   } else {
@@ -18,6 +18,5 @@ const eqArrays = function(arrayOne, arrayTwo) {
   }
   return true; // return true if passes all tests
 };
-
 
 module.exports = eqArrays;
