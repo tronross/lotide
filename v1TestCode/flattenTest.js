@@ -1,5 +1,5 @@
 const assertArraysEqual = require('../assertArraysEqual');
-const flatten = require('../flatten')
+const flatten = require('../flatten');
 
 // TEST CODE
 // Test case (a):
