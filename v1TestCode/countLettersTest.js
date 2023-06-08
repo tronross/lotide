@@ -1,5 +1,5 @@
 const assertEqual = require('../assertEqual');
-const countLetters = require('../countLetters')
+const countLetters = require('../countLetters');
 
 // TEST CODE
 const cat = "A cat is not a dog";

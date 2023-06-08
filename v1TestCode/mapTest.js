@@ -1,5 +1,5 @@
 const assertArraysEqual = require('../assertArraysEqual');
-const map = require('../map')
+const map = require('../map');
 
 //TEST CODE:
 const words = ["a", "screaming", "comes", "across", "the", "sky"];
