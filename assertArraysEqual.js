@@ -1,7 +1,15 @@
+//////////////////////
+// assertArraysEqual
+//////////////////////
+
 const eqArrays = require('./eqArrays');
 
-// FUNCTION
-// assertArraysEqual: A function to compare two arrays and assert if they are equal.
+/**
+ * Compares two arrays and asserts whether they are equal.
+ * @param {array} arrayOne 
+ * @param {array} arrayTwo
+ */
+
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   const arraysEqual = eqArrays(arrayOne, arrayTwo);
  
