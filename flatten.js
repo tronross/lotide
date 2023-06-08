@@ -1,6 +1,7 @@
 // FUNCTION
 // flatten: A function which takes in a two-dimensional array and returns a "flattened" version of the array.
-const flatten = function(array) {
+
+const flatten = function (array) {
   let flattenedArray = [];
 
   for (let i = 0; i < array.length; i++) {
