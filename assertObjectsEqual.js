@@ -1,7 +1,15 @@
+///////////////////////
+// assertObjectsEqual
+///////////////////////
+
 const eqObjects = require('./eqObjects');
 
-// FUNCTION
-// assertObjectsEqual: Takes in two objects and console.logs an appropriate assertion message to the console.
+/**
+ * Compares two objects and asserts whether they are found to be equal.
+ * @param {object} actual 
+ * @param {object} expected 
+ */
+// assertObjectsEqual: 
 const assertObjectsEqual = function (actual, expected) {
   const inspect = require('util').inspect;
   const perfectMatch = eqObjects(actual, expected);

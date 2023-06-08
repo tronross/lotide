@@ -5,7 +5,7 @@
 const eqArrays = require('./eqArrays');
 
 /**
- * Compares two arrays and asserts whether they are equal.
+ * Compares two arrays and asserts whether they are found to be equal.
  * @param {array} arrayOne 
  * @param {array} arrayTwo
  */
