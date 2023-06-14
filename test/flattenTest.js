@@ -1,8 +1,25 @@
 const assert = require('chai').assert;
 const flatten   = require('../flatten');
 
-// const assertArraysEqual = require('../assertArraysEqual');
-// const flatten = require('../flatten');
+describe("#flatten", () => {
+  it("returns a one-dimensional array when fed a two-dimensional array", () => {
+    assert.deepEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+  });
+
+  // it("returns 5 for [5, 6, 7]", () => {
+  //   assert.strictEqual(head([5,6,7]), 5);
+  // });
+
+  // it("returns 'So' for ['So', 'much', 'meow']", () => {
+  //   assert.strictEqual(head(['So', 'much', 'meow']), 'So');
+  // });
+
+  // it("fails when trying to return the head of an empty array", () => {
+  //   assert.isNotOk(head([]), 'this will fail');
+  // });
+
+});
+
 
 // // TEST CODE
 // // Test case (a):
