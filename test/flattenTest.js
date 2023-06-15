@@ -10,6 +10,9 @@ describe("#flatten", () => {
     assert.deepEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
   });
 
+  it("returns an empty array when fed an empty array", () => {
+    assert.deepEqual((flatten([])), []);
+  });
   // it("returns 'So' for ['So', 'much', 'meow']", () => {
   //   assert.strictEqual(head(['So', 'much', 'meow']), 'So');
   // });
