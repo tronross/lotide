@@ -10,6 +10,10 @@ describe("#flatten", () => {
     assert.deepEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
   });
 
+  it("returns a one-dimensional array maintaining types when fed a two-dimensional array of strings and numbers", () => {
+    assert.deepEqual((flatten(['yes', 17, ['no', 999], 'maybe'])), ['yes', 17, 'no', 999, 'maybe']);
+  });
+
   it("returns an empty array when fed an empty array", () => {
     assert.deepEqual((flatten([])), []);
   });
