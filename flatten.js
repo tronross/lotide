@@ -1,5 +1,13 @@
-// FUNCTION
-// flatten: A function which takes in a two-dimensional array and returns a "flattened" version of the array.
+////////////
+// flatten
+////////////
+
+ /**
+  * Takes in a two-dimensional array and returns a "flattened" version of the array.
+  *
+  * @param {array} array Two-dimensional array to be "flattened".
+  * @returns {array} Returns a "flattened", one-dimensional array.
+  */
 
 const flatten = function (array) {
   let flattenedArray = [];
