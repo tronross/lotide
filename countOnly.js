@@ -1,6 +1,14 @@
-// FUNCTION
-// countOnly: Takes in a collection of items (strings) and return counts for a specific subset of those items (strings).
-// allItems: an array of strings to be searched, itemsToCount: an object specifying what to count
+///////////////
+// countOnly: 
+///////////////
+
+/**
+ * Returns key-value pairs representing the count of the "key" in the source array.
+ *
+ * @param {array} allItems An array of strings to be searched/counted.
+ * @param {object} itemsToCount An object specifying what items to count.
+ * @returns {object} Returns the items and their count, if the item is true within itemsToCount.
+ */
 
 const countOnly = function (allItems, itemsToCount) {
   const results = {};
