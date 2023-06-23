@@ -4,26 +4,31 @@ const countOnly = require('../countOnly');
 const assertEqual = require('../assertEqual');
 
 const firstNames = [
-    "Karl",
-    "Salima",
-    "Agouhanna",
-    "Fang",
-    "Kavith",
-    "Jason",
-    "Salima",
-    "Fang",
-    "Joe"
-  ];
+  "Karl",
+  "Salima",
+  "Agouhanna",
+  "Fang",
+  "Kavith",
+  "Jason",
+  "Salima",
+  "Fang",
+  "Joe"
+];
 
-  const countNames = { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false };
+const countNames = { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false };
 
 describe("#countOnly", () => {
   it("returns an object containing the property 'Fang': 2 when the input array has two 'Fang's", () => {
-  const counts = countOnly(firstNames, countNames);
+    const counts = countOnly(firstNames, countNames);
 
-  assert.equal(counts["Fang"], 2)
+    assert.equal(counts["Fang"], 2)
   });
 
+  it("does not contain a property referencing an item if the input array does not contain it", () => {
+    const counts = countOnly(firstNames, countNames);
+
+    assert.equal(counts["Steve-o"], undefined)
+  });
   // it("returns a one-dimensional array when fed a two-dimensional array of strings", () => {
   //   assert.deepEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
   // });
