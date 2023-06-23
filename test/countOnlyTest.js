@@ -29,17 +29,7 @@ describe("#countOnly", () => {
 
     assert.equal(counts["Steve-o"], undefined)
   });
-  // it("returns a one-dimensional array when fed a two-dimensional array of strings", () => {
-  //   assert.deepEqual((flatten(['yes', ['no'], 'maybe'])), ['yes', 'no', 'maybe']);
-  // });
 
-  // it("returns a one-dimensional array when fed a two-dimensional array of strings and numbers, without mutating types", () => {
-  //   assert.deepEqual((flatten(['yes', 17, ['no', 999], 'maybe'])), ['yes', 17, 'no', 999, 'maybe']);
-  // });
-
-  // it("returns an empty array when fed an empty array", () => {
-  //   assert.deepEqual((flatten([])), []);
-  // });
 
 });
 // // TEST CODE:
