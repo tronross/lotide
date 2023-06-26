@@ -24,12 +24,23 @@ describe("#countOnly", () => {
     assert.equal(counts["Fang"], 2)
   });
 
+  it("returns an object containing the property 'Jason': 1 when the input array has one 'Jason'", () => {
+    const counts = countOnly(firstNames, countNames);
+
+    assert.equal(counts["Jason"], 1)
+  });
+
   it("does not contain a property referencing an item if the input array does not contain it", () => {
     const counts = countOnly(firstNames, countNames);
 
     assert.equal(counts["Steve-o"], undefined)
   });
 
+  it("does not contain a property referencing an item if the input object's corresponding key is false", () => {
+    const counts = countOnly(firstNames, countNames);
+
+    assert.equal(counts["Agouhanna"], undefined)
+  });
 
 });
 // // TEST CODE:
