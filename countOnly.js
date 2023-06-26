@@ -1,6 +1,6 @@
-///////////////
-// countOnly: 
-///////////////
+//////////////
+// countOnly
+//////////////
 
 /**
  * Returns key-value pairs representing the count of the "key" in the source array.
