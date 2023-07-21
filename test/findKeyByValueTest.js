@@ -19,6 +19,8 @@ describe("#findKeyByValue", () => {
     assert.equal(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama")
   });
 
-
+  it("returns undefined when the input value has no corresponding key", () => {
+    assert.equal(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined)
+  });
 
 });
