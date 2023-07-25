@@ -7,13 +7,6 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
-const petNames = {
-  dog: "Polar",
-  cat: "Peach",
-  bear: "Harold",
-  chipmunk: "Franz"
-};
-
 describe("#findKeyByValue", () => {
   it("returns the key when its corresponding value is input", () => {
     assert.equal(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama")
