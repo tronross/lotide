@@ -26,4 +26,8 @@ describe("#findKey", () => {
     assert.equal(findKey(lunch, x => x < 10), "Falafel");
   });
 
+  it("returns undefined when the callback returns a falsy value", () => {
+    assert.equal(findKey(lunch, x => x < 5), undefined);
+  });
+
 });
