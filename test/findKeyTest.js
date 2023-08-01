@@ -18,10 +18,12 @@ const lunch = {
 };
 
 describe("#findKey", () => {
-  it("returns the correct key when callback is strict equal to a string", () => {
+  it("returns the correct key when the callback is === to a particular string", () => {
     assert.equal(findKey(cats, x => x === "Peach"), "Cat2");
   });
 
-
+  it("returns the correct key when the callback is < a particular number", () => {
+    assert.equal(findKey(lunch, x => x < 10), "Falafel");
+  });
 
 });
