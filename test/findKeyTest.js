@@ -17,6 +17,12 @@ const lunch = {
   "Steak": 25
 };
 
+const songs = {
+  "The Botttom Line": { artist: "O.V. Wright", length: 313 },
+  "I Don't Do Windows": { artist: "O.V. Wright", length: 224 },
+  "That's the Way I Feel About 'Cha": { artist: "O.V. Wright", length: 515 }
+};
+
 describe("#findKey", () => {
   it("returns the correct key when the callback is === to a particular string", () => {
     assert.equal(findKey(cats, x => x === "Peach"), "Cat2");
