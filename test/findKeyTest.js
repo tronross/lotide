@@ -36,4 +36,8 @@ describe("#findKey", () => {
     assert.equal(findKey(lunch, x => x < 5), undefined);
   });
 
+  it("returns the correct key when the callback is < a particular number in nested object property", () => {
+    assert.equal(findKey(songs, x => x.length < 300), "I Don't Do Windows");
+  });
+
 });
