@@ -5,8 +5,10 @@ const map = require('../map');
 const words = ["a", "screaming", "comes", "across", "the", "sky"];
 
 // Case a:
+console.log(`OG: ${words}`)
 const results1 = map(words, word => word[0]);
 assertArraysEqual(results1, ['a', 's', 'c', 'a', 't', 's']);
+console.log(`After map: ${words}`)
 
 // Case b:
 const results2 = map(words, word => word.toUpperCase());
