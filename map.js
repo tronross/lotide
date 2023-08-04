@@ -11,8 +11,10 @@
  */
 
 const map = function (array, callback) {
+  const safetyArray = [...array];
   const results = [];
-  for (let item of array) {
+  
+  for (let item of safetyArray) {
     results.push(callback(item));
   }
   return results;
