@@ -9,6 +9,11 @@ describe("#map", () => {
     assert.deepEqual(results1, ['a', 's', 'c', 'a', 't', 's']);
   });
 
-
+  it("does not mutate the input array", () => {
+    const words1 = words;
+    const words2 = words; 
+    map(words1, word => word[0]);
+    assert.deepEqual(words1, words2);
+  });
 
 });
